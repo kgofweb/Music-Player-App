@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+.phone .volume, .phone .navigation .nav-btn .action-btn.action-btn-big, .phone .navigation .nav-btn, .phone .navigation, .phone .music-info .progress-bar, .phone .header, body {
+  display: flex;
+  align-items: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  justify-content: center;
+  height: 100vh;
+  background-color: #eee;
+}
+
+.phone {
+  width: 411px;
+  height: 823px;
+  background-color: #fff;
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px 20px;
+  box-shadow: 0 5px 20px 0 rgba(94, 94, 94, 0.363);
+  overflow: hidden;
+}
+.phone .header {
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.phone .header span {
+  font-weight: bold;
+  color: #54C27A;
+}
+.phone .header .icon {
+  color: #c4c4c4;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.phone .music-info {
+  padding: 15px 0;
+}
+.phone .music-info .img-cover {
+  width: 250px;
+  margin: 20px;
+  border-radius: 50%;
+  animation: rotate 3s linear infinite;
+  animation-play-state: paused;
+}
+.phone .music-info .progress-bar {
+  justify-content: space-around;
+}
+.phone .music-info .progress-bar .progress-container {
+  width: 100%;
+  height: 5px;
+  background: #f4f4f4;
+  border-radius: 5px;
+  margin: 0 15px;
+  cursor: pointer;
+}
+.phone .music-info .progress-bar .progress-container .progress {
+  background-color: #6c5ce7;
+  border-radius: 5px;
+  width: 0%;
+  height: 100%;
+  transition: width 0.2s linear;
+}
+.phone .music-info .description {
+  margin-top: 2rem;
+}
+.phone .music-info .description-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.phone .music-info .description-artist-name {
+  font-size: 1.3rem;
+  color: #d4d4d4;
+}
+.phone .navigation {
+  justify-content: space-evenly;
+  margin-top: 3rem;
+  margin-bottom: 5.5rem;
+}
+.phone .navigation .fa-redo,
+.phone .navigation .fa-retweet {
+  color: #dfdbdf;
+  cursor: pointer;
+}
+.phone .navigation .nav-btn {
+  position: relative;
+  justify-content: center;
+  border: 0.5px solid #C4C4C4;
+  border-radius: 50px;
+}
+.phone .navigation .nav-btn .action-btn {
+  margin: 3px 30px;
+  padding: 5px 10px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background: none;
+  color: #dfdbdf;
+  cursor: pointer;
+}
+.phone .navigation .nav-btn .action-btn.action-btn-big {
+  position: absolute;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  font-size: 25px;
+  background-color: #54C27A;
+  border-radius: 50%;
+  color: #fff;
+}
+.phone .volume {
+  justify-content: center;
+  color: #c4c4c4;
+}
+.phone .volume .volumeShow {
+  font-size: 18px;
+  padding: 0px 10px;
+  margin: 0 5px 0 0;
+  color: #444;
+}
+.phone .volume i {
+  font-size: 25px;
+  cursor: pointer;
+  border-radius: 3px;
+  color: #d4d4d4;
+}
+.phone .volume .volumeChange {
+  -webkit-appearance: none;
+  width: 40%;
+  height: 2px;
+  margin: 0 15px;
+  outline: none;
+  background-color: #C4C4C4;
+  cursor: pointer;
+}
+.phone .volume .volumeChange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #6c5ce7;
+  cursor: pointer;
+}
+
+.phone.play .img-container img {
+  animation-play-state: running;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

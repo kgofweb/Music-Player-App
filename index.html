@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <title>Music Player App</title>
+</head>
+<body>
+
+  <div class="phone">
+
+    <header class="header">
+      <i class="fas fa-chevron-left icon"></i>
+      <h3><span>Retro</span> Music</h3>
+      <i class="far fa-heart icon"></i>
+    </header>
+
+    <!-- Music Info -->
+    <div class="music-info">
+      <div class="img-container">
+        <img src="./img/flux.jpg" class="img-cover" id="cover" alt="Music Cover">
+      </div>
+      <div class="progress-bar">
+        <p class="time" id="time-start"></p>
+        <div class="progress-container" id="progress-container">
+          <div class="progress" id="progress"></div>
+        </div>
+        <p class="time" id="time-end"></p>
+      </div>
+      <div class="description">
+        <h4 id="title" class="description-title">Unknow</h4>
+        <p id="artist" class="description-artist-name">Ellie Goulding</p>
+      </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="audio" src="./music/How Deep Is Too Deep.mp3"></audio>
+
+    <!-- Navigation -->
+    <div class="navigation">
+      <i class="fas fa-redo"></i>
+      <div class="nav-btn">
+        <button id="prev" class="action-btn border">
+          <i class="fas fa-backward"></i>
+        </button>
+        <button id="play" class="action-btn action-btn-big">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="next" class="action-btn border">
+          <i class="fas fa-forward"></i>
+        </button>
+      </div>
+      <i class="fas fa-retweet"></i>
+    </div>
+
+    <!-- Volume -->
+    <div id="volume" class="volume">
+      <p id="volume-show" class="volumeShow">60</p>
+
+      <i class="bx bx-volume-low" aria-hidden="true" class="volumeIcon mute" id="mute-volume"></i>
+
+      <input type="range" min="0" max="100" value="60" class="volumeChange" id="volume-change">
+
+      <i class="bx bx-volume-full" aria-hidden="true" class="volumeIcon" id="active-volume"></i>
+    </div>
+
+  </div>
+  
+  <script src="./js/app.js"></script>
+</body>
+</html>

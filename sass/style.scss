@@ -1,0 +1,197 @@
+// Google font
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+@import 'utilities';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  @extend %display;
+  justify-content: center;
+  height: 100vh;
+  background-color: #eee;
+}
+
+
+.phone {
+  width: 411px;
+  height: 823px;
+  background-color: #fff;
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px 20px;
+  box-shadow: 0 5px 20px 0 rgba(94, 94, 94, 0.363);
+  overflow: hidden;
+
+  // Header
+  .header {
+    @extend %display;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    span {
+      font-weight: bold;
+      color: #54C27A;
+    }
+
+    .icon {
+      color: #c4c4c4;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+  }
+
+  // Music Info
+  .music-info {
+    padding: 15px 0;
+
+    .img-cover {
+      width: 250px;
+      margin: 20px;
+      border-radius: 50%;
+      animation: rotate 3s linear infinite;
+
+      animation-play-state: paused;
+    }
+  
+    // Progress
+    .progress-bar {
+      @extend %display;
+      justify-content: space-around;
+
+      .progress-container {
+        width: 100%;
+        height: 5px;
+        background: #f4f4f4;
+        border-radius: 5px;
+        margin: 0 15px;
+        cursor: pointer;
+
+        .progress {
+          background-color: #6c5ce7;
+          border-radius: 5px;
+          width: 0%;
+          height: 100%;
+          transition: width 0.2s linear;
+        }
+      }
+    }
+
+    .description {
+      margin-top: 2rem;
+
+      &-title {
+        font-size: 1.5rem;
+        margin-bottom: .5rem;
+      }
+
+      &-artist-name {
+        font-size: 1.3rem;
+        color: #d4d4d4;
+      }
+    }
+  }
+
+  // Navigation
+  .navigation {
+    @extend %display;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+    margin-bottom: 5.5rem;
+
+    .fa-redo,
+    .fa-retweet {
+      color: #dfdbdf;
+      cursor: pointer;
+    }
+
+    .nav-btn {
+      position: relative;
+      @extend %display;
+      justify-content: center;
+      border: .5px solid #C4C4C4;
+      border-radius: 50px;
+
+      .action-btn {
+        margin: 3px 30px;
+        padding: 5px 10px;
+        font-size: 20px;
+        border: none;
+        outline: none;
+        background: none;
+        color: #dfdbdf;
+        cursor: pointer;
+    
+        &.action-btn-big {
+          position: absolute;
+          @extend %display;
+          justify-content: center;
+          width: 60px;
+          height: 60px;
+          font-size: 25px;
+          background-color: #54C27A;
+          border-radius: 50%;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  // Volume
+  .volume {
+    @extend %display;
+    justify-content: center;
+    color: #c4c4c4;
+
+    .volumeShow {
+      font-size: 18px;
+      padding: 0px 10px;
+      margin: 0 5px 0 0;
+      color: #444;
+    }
+
+    i {
+      font-size: 25px;
+      cursor: pointer;
+      border-radius: 3px;
+      color: #d4d4d4;
+    }
+
+    .volumeChange {
+      -webkit-appearance: none;
+      width: 40%;
+      height: 2px;
+      margin: 0 15px;
+      outline: none;
+      background-color: #C4C4C4;
+      cursor: pointer;
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        background: #6c5ce7;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.phone.play .img-container img {
+  animation-play-state: running;
+}
+
+// Animation
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  } to {
+    transform: rotate(360deg);
+  }
+}
